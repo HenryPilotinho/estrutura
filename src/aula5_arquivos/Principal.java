@@ -6,12 +6,13 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Principal {
 	final static String ARQ_IN = "C:\\Users\\FATEC ZONA LESTE\\Downloads\\musica.txt";
 	static FileReader fr; 
 	static BufferedReader br;
-	
+	static Scanner leitor;
 	
 	final static String ARQ_OUT = "C:\\Users\\FATEC ZONA LESTE\\Downloads\\saida.txt";
 	static FileWriter fw;
@@ -28,9 +29,34 @@ public class Principal {
 		exemploEscrita();
 		ex1DataSubstring();
 		ex2Datasplit();
+		ex3Datasplit();
+		ex4lowerCaseTrim();
 		
 		
 		
+	}
+
+
+	private static void ex4lowerCaseTrim() {
+		String respostauser = "nelson nelsin";
+		 leitor = new Scanner(System.in);
+		System.out.println("Quem descobriu o Brasil?");
+		String resposta = leitor.nextLine();
+		
+		if (resposta.trim().toLowerCase().equals(respostauser)) {
+			System.out.println("Parabéns!");
+		} else {
+			System.out.println("ta errado nelson");
+		}
+		
+	}
+
+
+	private static void ex3Datasplit() {
+		String nomeComp = "Nelson Nere Nelso";
+		String [] nomes = nomeComp.split(" ");
+		int ultPos = nomes.length - 1;
+		System.out.println(nomes[ultPos]);
 	}
 
 
