@@ -27,8 +27,20 @@ public class Principal {
 		exemploLeitura();
 		exemploEscrita();
 		ex1DataSubstring();
+		ex2Datasplit();
 		
 		
+		
+	}
+
+
+	private static void ex2Datasplit() {
+		String dataEua = "2020/09/22";
+		String[] datas = dataEua.split("/");
+		String ano = datas[0];
+		String mes = datas[1];
+		String dia = datas[2];
+		System.out.println(dia+"/"+mes+"/"+ano);
 		
 	}
 
